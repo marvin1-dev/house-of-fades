@@ -17,31 +17,29 @@ a {
 .hero-slider {
   height: 100vh;
 }
-.video-hero {
-  position: relative;
+.slide {
+  background-size: cover;
+  background-position: center;
   height: 100vh;
-  overflow: hidden;
 }
-.video-bg {
-  position: absolute;
-  width: 100%;
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-.video-hero .overlay {
-  position: relative;
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 }
-.overlay h1 {
-  color: white;
-  font-size: 3rem;
+.hero-content {
   text-align: center;
-  padding: 0 1rem;
+  color: white;
+}
+.hero-content svg {
+  margin-bottom: 1rem;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .navbar {
@@ -149,8 +147,8 @@ a {
 
 /* Responsive Typography */
 @media (max-width: 768px) {
-  .overlay h1 {
-    font-size: 2rem;
+  .hero-content h1 {
+    font-size: 2.2rem;
   }
   .nav-links {
     flex-direction: column;
@@ -162,7 +160,7 @@ a {
   }
 }
 @media (max-width: 480px) {
-  .overlay h1 {
-    font-size: 1.5rem;
+  .hero-content h1 {
+    font-size: 1.6rem;
   }
 }
