@@ -9,10 +9,14 @@
   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
-  <!-- Hero Slider -->
+  <!-- Hero Slider with Video Background -->
   <div class="swiper mySwiper hero-slider">
     <div class="swiper-wrapper">
-      <div class="swiper-slide slide" style="background-image: url('https://source.unsplash.com/featured/?barbershop');">
+      <div class="swiper-slide slide video-hero">
+        <video autoplay muted loop playsinline class="video-bg">
+          <source src="https://cdn.coverr.co/videos/coverr-handsome-man-at-the-barbershop-9744/1080p.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
         <div class="overlay">
           <h1>Modern Cuts. Classic Style.</h1>
         </div>
@@ -46,14 +50,17 @@
     <h2>Our Services</h2>
     <div class="card-grid">
       <div class="card">
+        <img src="https://source.unsplash.com/400x300/?barber,haircut" alt="Haircut" class="service-img" />
         <h3>Haircuts</h3>
         <p>Classic, modern, fades, and everything in between.</p>
       </div>
       <div class="card">
+        <img src="https://source.unsplash.com/400x300/?barber,shave" alt="Shaves" class="service-img" />
         <h3>Shaves</h3>
         <p>Hot towel shaves and beard grooming services.</p>
       </div>
       <div class="card">
+        <img src="https://source.unsplash.com/400x300/?barber,styling" alt="Styling" class="service-img" />
         <h3>Styling</h3>
         <p>Professional styling to match your personality.</p>
       </div>

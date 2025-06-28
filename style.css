@@ -1,4 +1,3 @@
-/* Base Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,27 +9,33 @@ body {
   color: #333;
   background: white;
 }
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Hero Slider */
 .hero-slider {
   height: 100vh;
 }
-.slide {
-  background-size: cover;
-  background-position: center;
+.video-hero {
   position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
-.overlay {
-  background: rgba(0, 0, 0, 0.5);
+.video-bg {
+  position: absolute;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.video-hero .overlay {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 .overlay h1 {
   color: white;
@@ -39,7 +44,6 @@ a {
   padding: 0 1rem;
 }
 
-/* Navigation */
 .navbar {
   position: sticky;
   top: 0;
@@ -68,7 +72,6 @@ a {
   color: #0070f3;
 }
 
-/* Sections */
 .section {
   padding: 4rem 2rem;
   max-width: 960px;
@@ -79,7 +82,6 @@ a {
   background: #f7f7f7;
 }
 
-/* Services */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -96,8 +98,14 @@ a {
 .card:hover {
   transform: translateY(-4px);
 }
+.service-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
 
-/* Contact Form */
 .form {
   display: flex;
   flex-direction: column;
@@ -124,7 +132,6 @@ a {
   background: #0059c1;
 }
 
-/* Map */
 .map {
   width: 100%;
   height: 300px;
@@ -132,7 +139,6 @@ a {
   border-radius: 10px;
 }
 
-/* Footer */
 .footer {
   background: #000;
   color: #fff;
@@ -142,15 +148,6 @@ a {
 }
 
 /* Responsive Typography */
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.3rem;
-}
 @media (max-width: 768px) {
   .overlay h1 {
     font-size: 2rem;
@@ -167,11 +164,5 @@ h3 {
 @media (max-width: 480px) {
   .overlay h1 {
     font-size: 1.5rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.1rem;
   }
 }
