@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Barbershop</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+  <!-- Hero Slider -->
+  <div class="swiper mySwiper hero-slider">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide slide" style="background-image: url('https://source.unsplash.com/featured/?barbershop');">
+        <div class="overlay">
+          <h1>Modern Cuts. Classic Style.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <h2>Barbershop</h2>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We blend tradition with modern style to deliver a unique grooming experience.</p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section gray-bg">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Haircuts</h3>
+        <p>Classic, modern, fades, and everything in between.</p>
+      </div>
+      <div class="card">
+        <h3>Shaves</h3>
+        <p>Hot towel shaves and beard grooming services.</p>
+      </div>
+      <div class="card">
+        <h3>Styling</h3>
+        <p>Professional styling to match your personality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section id="locations" class="section">
+    <h2>Our Locations</h2>
+    <iframe class="map" src="https://www.google.com/maps/embed/v1/search?q=barbershop&key=YOUR_GOOGLE_MAPS_API_KEY" allowfullscreen></iframe>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section gray-bg">
+    <h2>Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true" class="form">
+      <input type="hidden" name="form-name" value="contact">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Modern Barbershop. All rights reserved.</p>
+  </footer>
+
+  <script>
+    new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+</html>
