@@ -31,6 +31,98 @@ a {
   min-height: 100vh;
 }
 
+.video-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent 40%, rgba(0, 0, 0, 0.9));
+  z-index: 2;
+}
+
+.hero-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.hero-logo-small {
+  height: 60px;
+}
+
+.hero-nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+}
+
+.hero-nav-links a {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.hero-nav-links a:hover {
+  color: #f0c674;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  color: #f0c674;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.hero-headline {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 1.8rem;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .hero-slider,
   .slide {
@@ -300,4 +392,49 @@ a {
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
+}
+
+
+.media-hero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.media-left,
+.media-right {
+  flex: 1;
+  min-width: 300px;
+  height: 100%;
+  position: relative;
+}
+
+.media-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay-wrap {
+  overflow: hidden;
+}
+
+.media-right video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.video-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent 50%);
+  z-index: 2;
 }
