@@ -5,104 +5,323 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>House of Fades</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@10/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 <body>
+  <!-- Navbar -->
+  <nav class="hero-navbar">
+    <img src="./imgs/House-of-Fades-white.png" alt="House of Fades Logo" class="hero-logo-small" />
+    <div class="nav-wrapper" id="nav-wrapper">
+      <ul class="hero-nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+  </nav>
   <!-- Hero Slider with Logo + Nav Inside -->
-  <div class="swiper mySwiper hero-slider">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide slide" style="background-image: url('https://picsum.photos/1920/1080?random=9');">
-        <div class="overlay">
-          <!-- Hero Navbar with Logo and Links -->
-          <div class="hero-navbar">
-            <img src="./imgs/House-of-Fades-logo.png" alt="House of Fades Logo" class="hero-logo-small" />
-            <ul class="hero-nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#locations">Locations</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- Centered Hero Content -->
-          <div class="hero-content">
-            <img src="./imgs/House-of-Fades-white.png" alt="House of Fades" class="hero-logo" />
-            
+<section class="hero-carousel">
+  <div class="owl-carousel owl-theme">
+    <div class="item bg-img" style="background-image: url('./imgs/Gallery-2.jpg');">
+      <div class="v-middle caption">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <h6>Established 2006</h6>
+              <h1>Barber Shop You Will Ever Need</h1>
+              <h4>3463 Springs Rd NE, Hickory, NC 28601. Appointment: (828) 578 6003</h4>
+              <a href="#contact" class="button-1 mt-30">Make Appointment<span></span></a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="item bg-img" style="background-image: url('./imgs/Gallery-3.jpg');">
+      <div class="v-middle caption">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <h6>Stay sharp, Look good</h6>
+              <h1>Get Your Style You Deserve</h1>
+              <h4>3463 Springs Rd NE, Hickory, NC 28601. Appointment: (828) 578 6003</h4>
+              <a href="#contact" class="button-1 mt-30">Make Appointment<span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="item bg-img" style="background-image: url('./imgs/Gallery-4.jpg');">
+      <div class="v-middle caption">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+              <h6>Not Just A Barber, But A Lifestyle</h6>
+              <h1>Where Precision Meets Passion</h1>
+              <h4>3463 Springs Rd NE, Hickory, NC 28601. Appointment: (828) 578 6003</h4>
+              <a href="#contact" class="button-1 mt-30">Make Appointment<span></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
   
 
-<!-- Image + Video Hero Section -->
-<section class="media-hero">
-  <div class="media-left">
-    <img src="./imgs/House-of-Fades-white.png" alt="Barbershop Look" />
-  </div>
-  <div class="media-right">
-    <video autoplay muted loop playsinline>
-      <source src="./videos/intro.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
-</section>
 
 
   <!-- Main Sections (unchanged) -->
   <!-- About -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>We blend tradition with modern style to deliver a unique grooming experience.</p>
-  </section>
+<section id="about" class="section about-wrap full-width-section">
+  <div class="about-container">
+    <div class="about-left">
+      <div class="about-overlay">
+        <div class="about-hours-box">
+          <img src="imgs/barbershop icon.png" alt="Barbershop Icon" class="scissors-icon"> 
+          <h3>Shop Hours</h3>
+          <ul class="shop-hours">
+            <li><strong>Sunday</strong><span>9:30 AM – 5:00 PM</span></li>
+            <li><strong>Monday</strong><span>9:00 AM – 6:00 PM</span></li>
+            <li><strong>Tuesday</strong><span>9:00 AM – 6:00 PM</span></li>
+            <li><strong>Wednesday</strong><span>9:00 AM – 6:00 PM</span></li>
+            <li><strong>Thursday</strong><span>9:00 AM – 6:00 PM</span></li>
+            <li><strong>Friday</strong><span>9:00 AM – 6:00 PM</span></li>
+            <li><strong>Saturday</strong><span>9:00 AM – 6:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="about-right">
+      <h2 class="about-title">Welcome to House of Fades</h2>
+      <p class="subtitle">Defining Your Style — One Fade at a Time</p>
+      <p>
+        At House of Fades, we’re more than just a barbershop — we’re a destination for men who value style, confidence, and craft. From classic cuts to the latest fades and beard detailing, our expert barbers blend tradition with precision to deliver sharp results every time.
+      </p>
+      <p>
+        We’ve created a space where men can relax, unwind, and walk out feeling their best. Whether it’s your weekly cut, a special occasion, or just time to freshen up, we’ve got you covered with a laid-back vibe and top-tier service.
+      </p>
+      <p>
+        Appointments are recommended to keep wait times short, but walk-ins are always welcome. We also carry a selection of quality grooming products to help you maintain your look between visits.
+      </p>
+      <p class="signature">— The House of Fades Team</p>
+      <button class="cta-button">Book an Appointment</button>
 
-<section id="services" class="section gray-bg">
-  <h2>Our Services</h2>
-  <div class="services-list">
-    <div class="service-item">
-    <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Haircut</h3>
-      <p>Fresh fade, taper, or classic cut tailored to your style.</p>
-      <div class="price">$30</div>
-    </div>
-    <div class="service-item">
-        <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Haircut + Beard</h3>
-      <p>Precision haircut and beard trim for a clean, sharp look.</p>
-      <div class="price">$40</div>
-    </div>
-    <div class="service-item">
-        <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Beard Trim</h3>
-      <p>Expert shaping and line-up with optional enhancements.</p>
-      <div class="price">$20</div>
-    </div>
-    <div class="service-item">
-        <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Hot Towel Shave</h3>
-      <p>Classic straight razor shave with relaxing hot towel.</p>
-      <div class="price">$25</div>
-    </div>
-    <div class="service-item">
-        <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Line Up</h3>
-      <p>Crisp line-up of hairline, beard, or both — sharp & quick.</p>
-      <div class="price">$15</div>
-    </div>
-    <div class="service-item">
-        <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard" class="service-img" />
-      <h3>Kids Haircut</h3>
-      <p>Age-appropriate styles with a gentle, professional touch.</p>
-      <div class="price">$25</div>
     </div>
   </div>
 </section>
 
 
+<section id="services" class="barber-services section">
+  <div class="container">
+    <div class="section-head text-center">
+      <div class="section-subtitle">What we're offering</div>
+      <div class="section-title">Popular Services</div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-5">
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Hair Cut">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Hair Cut</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Fresh fade, taper, or classic cut tailored to your style.</div>
+                  <h6>$30</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Haircut + Beard">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Haircut + Beard</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Precision haircut and beard trim for a clean, sharp look.</div>
+                  <h6>$40</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Beard Trim">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Beard Trim</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Expert shaping and line-up with optional enhancements.</div>
+                  <h6>$20</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Hot Towel Shave">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Hot Towel Shave</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Classic straight razor shave with relaxing hot towel.</div>
+                  <h6>$25</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Line Up">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Line Up</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Crisp line-up of hairline, beard, or both — sharp & quick.</div>
+                  <h6>$15</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col wow animate__animated animate__fadeInUp" data-wow-delay="0.3s" data-wow-duration="1.2s">
+        <div class="item service-card">
+          <div class="position-re o-hidden service-image-wrap">
+            <img src="imgs/beard-haircut.jpeg" alt="Kids Haircut">
+            <div class="service-overlay">
+              <div class="service-details">
+                <h5 class="title">Kids Haircut</h5>
+                <div class="info">
+                  <div class="line"></div>
+                  <div class="permalink">Age-appropriate styles with a gentle, professional touch.</div>
+                  <h6>$25</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Gallery Section -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="grid">
+    <div class="item">
+      <div class="item__details">Clean Fade</div>
+    </div>
+    <div class="item item--large">
+      <div class="item__details">Precision Beard Trim</div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">Hot Towel Shave</div>
+    </div>
+    <div class="item item--large">
+      <div class="item__details">Kids Haircut</div>
+    </div>
+    <div class="item item--full">
+      <div class="item__details">Classic Cut in Action</div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">Line-Up Perfection</div>
+    </div>
+    <div class="item item--large">
+      <div class="item__details">Barber at Work</div>
+    </div>
+    <div class="item">
+      <div class="item__details">Client Fresh Look</div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">Modern Taper</div>
+    </div>
+    <div class="item item--large">
+      <div class="item__details">Beard Detail Closeup</div>
+    </div>
+    <div class="item">
+      <div class="item__details">Before & After</div>
+    </div>
+    <div class="item item--medium">
+      <div class="item__details">Fade with Design</div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<!-- Enhanced Lightbox Modal with Caption -->
+<div id="lightbox-modal" class="lightbox-modal">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-content" id="lightbox-image">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <a class="lightbox-prev">&#10094;</a>
+  <a class="lightbox-next">&#10095;</a>
+</div>
+
+
+
+<!-- Reviews Section -->
+<section id="reviews" class="section about-wrap full-width-section">
+  <h2 class="color-title">What Our Clients Say</h2>
+  <div class="review-cards">
+    <div class="review-card">
+      <p class="review-text">“Best barbershop in town. The fade was perfect and the vibe is always chill.”</p>
+      <p class="review-author">— Mike D.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“They take their time and make sure you leave looking your best. Highly recommend.”</p>
+      <p class="review-author">— James R.</p>
+    </div>
+    <div class="review-card">
+      <p class="review-text">“My son actually looks forward to haircuts now. Friendly staff and clean shop.”</p>
+      <p class="review-author">— Erica B.</p>
+    </div>
+  </div>
+</section>
 
 
   <!-- Locations -->
@@ -128,17 +347,123 @@
     <p>&copy; 2025 House of Fades. All rights reserved.</p>
   </footer>
 
-  <script>
-    new Swiper(".mySwiper", {
-      loop: true,
-      autoplay: {
-        delay: 5000,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
+
+  <!-- WOW.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+  new WOW().init();
+</script>
+
+
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navWrapper = document.getElementById("nav-wrapper");
+
+  hamburger.addEventListener("click", () => {
+    navWrapper.classList.toggle("show");
+  });
+</script>
+
+<script>
+  const navbar = document.querySelector(".hero-navbar");
+  const hero = document.querySelector(".hero-carousel");
+
+  window.addEventListener("scroll", () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+
+    console.log("Hero bottom:", heroBottom); // Debugging line
+
+    if (heroBottom <= 80) {
+      console.log("Navbar becomes solid");   // Debugging
+      navbar.classList.add("solid");
+    } else {
+      console.log("Navbar transparent again"); // Debugging
+      navbar.classList.remove("solid");
+    }
+  });
+</script>
+
 </body>
 </html>
+
+
+
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      nav: true, // enable arrows
+      dots: true,
+      animateOut: 'fadeOut',
+      navText: [
+  "<i class='fas fa-chevron-left'></i>",
+  "<i class='fas fa-chevron-right'></i>"
+      ]
+    });
+  });
+</script>
+
+<script>
+  const items = document.querySelectorAll("#gallery .item");
+  const modal = document.getElementById("lightbox-modal");
+  const modalImg = document.getElementById("lightbox-image");
+  const closeBtn = document.querySelector(".lightbox-close");
+  const prevBtn = document.querySelector(".lightbox-prev");
+  const nextBtn = document.querySelector(".lightbox-next");
+  const captionBox = document.getElementById("lightbox-caption");
+
+
+  let currentIndex = 0;
+
+const openModal = (index) => {
+  const style = window.getComputedStyle(items[index]);
+  const backgroundImage = style.backgroundImage;
+  const imageUrl = backgroundImage.slice(5, -2); // Strip url("...")
+  const captionText = items[index].querySelector(".item__details")?.textContent || "";
+
+  modalImg.src = imageUrl;
+  captionBox.textContent = captionText;
+  modal.style.display = "flex";
+  currentIndex = index;
+};
+
+  const closeModal = () => {
+    modal.style.display = "none";
+    modalImg.src = "";
+  };
+
+  items.forEach((item, index) => {
+    item.addEventListener("click", () => openModal(index));
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    openModal(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    openModal(currentIndex);
+  });
+
+  // Optional: Close on ESC key
+  document.addEventListener("keydown", (e) => {
+    if (modal.style.display === "flex") {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowLeft") prevBtn.click();
+      if (e.key === "ArrowRight") nextBtn.click();
+    }
+  });
+</script>
+
+
