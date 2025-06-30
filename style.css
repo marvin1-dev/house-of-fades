@@ -133,7 +133,7 @@ a {
 
 
 .hero-logo-small {
-  height: 120px; /* increase from 60px */
+  height: 140px; /* increase from 60px */
   width: auto;
 }
 
@@ -285,7 +285,7 @@ a {
 }
 
 .hero-navbar.solid {
-  background-color: #14100c;
+  background-color: #14100c !important;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
@@ -509,13 +509,13 @@ a {
 }
 
 .barber-services .item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-1px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.25);
 }
 
 .barber-services .position-re.o-hidden img {
   width: 100%;
-  height: 220px;
+  height: 260px; /* previously 220px */
   object-fit: cover;
 }
 
@@ -562,7 +562,7 @@ a {
 
 .row-cols-md-3 > .col {
   flex: 0 0 auto;
-  width: 33.3333%;
+  width: 45%;
   padding: 2rem;
   box-sizing: border-box;
 }
@@ -677,7 +677,7 @@ a {
 .about-left {
   flex: 1;
   min-width: 300px;
-  background: url('imgs/about-background.jpg') center/cover no-repeat;
+  background: url('imgs/Gallery-2.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -866,9 +866,17 @@ a {
 }
 
 .barber-services {
-  background-color: #0e0e0e;
-  color: #fff;
+  position: relative;
+  overflow: hidden;
 }
+
+.barber-services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
 
 .section-head .section-subtitle {
   color: #c59d5f;
@@ -909,6 +917,7 @@ a {
   position: relative;
   cursor: pointer;
   transition: transform 0.4s ease;
+
 }
 
 .service-card:hover {
@@ -945,13 +954,13 @@ a {
 
 .service-card:hover .service-overlay {
   transform: translateY(0);
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.6);
 
 }
 
 .service-details h5 {
   margin-top: 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #c59d5f;
 }
 
@@ -963,7 +972,7 @@ a {
 }
 
 .service-details .permalink {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
   color: #ddd;
   margin-bottom: 0.5rem;
 }
@@ -1141,4 +1150,168 @@ h2.color-title {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: capitalize;
+}
+.appointment-section {
+  padding: 0;
+  background: #f5eee7;
+}
+
+.appointment-bg {
+  background-image: url('imgs/Walk-Ins.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+  position: relative;
+  color: #fff;
+}
+
+.appointment-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.appointment-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.appointment-left {
+  flex: 1;
+  color: #fff;
+}
+
+.appointment-left h5 {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.reservations {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.reservations .label {
+  color: #c59d5f;
+  text-transform: uppercase;
+}
+
+.appointment-right {
+  flex: 1;
+  background: #f5eee7;
+  padding: 2rem;
+  border-radius: 8px;
+  color: #111;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.appointment-right h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.appointment-form .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.appointment-form input,
+.appointment-form select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.appointment-form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #b58429;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-form button:hover {
+  background-color: #a87f40;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .appointment-content {
+    flex-direction: column;
+  }
+
+  .appointment-right {
+    width: 100%;
+  }
+
+  .appointment-form .form-row {
+    flex-direction: column;
+  }
+}
+.reservations .icon {
+  width: 48px;
+  height: 48px;
+  background-color: #b58429;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.reservations .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: invert(1); /* makes a black SVG white — adjust based on your icon color */
+}
+
+.barber-services-section {
+  background-image: url('imgs/Walk-Ins.jpg'); /* Replace with your actual background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.barber-services-overlay {
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  padding: 6rem 0;
+}
+
+.barber-services {
+  color: #fff;
+}
+
+.barber-services .section-title,
+.barber-services .section-subtitle {
+  text-align: center;
 }
